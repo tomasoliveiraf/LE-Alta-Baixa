@@ -112,17 +112,18 @@ h1.header-title {
 
 /* NAVBAR */
 .nav {
-  position:fixed;
+  position: fixed;
   z-index: 2;
   top: 0;
   right: 0;
   height: 100%;
+  font-size: 0;
 }
 
-
 .nav-articles,
-.nav-about,.nav-articles-content,.nav-articles-content {
- 
+.nav-about,
+.nav-articles-content,
+.nav-articles-content {
   width: 5em;
   height: 100%;
   position: relative;
@@ -133,12 +134,11 @@ h1.header-title {
   cursor: pointer;
 }
 
- .nav-articles-content, .nav-articles-content {
+.nav-articles-content,
+.nav-articles-content {
   display: none;
   background-color: white;
-  width:fit-content;
-  
-  
+  width: fit-content;
 }
 
 .nav-articles > h6,
