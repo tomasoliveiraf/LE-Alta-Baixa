@@ -112,14 +112,17 @@ h1.header-title {
 
 /* NAVBAR */
 .nav {
-  position: absolute;
+  position:fixed;
+  z-index: 2;
   top: 0;
   right: 0;
   height: 100%;
 }
 
+
 .nav-articles,
-.nav-about {
+.nav-about,.nav-articles-content,.nav-articles-content {
+ 
   width: 5em;
   height: 100%;
   position: relative;
@@ -127,6 +130,15 @@ h1.header-title {
 
   border-left: 1px solid black;
   background-color: white;
+  cursor: pointer;
+}
+
+ .nav-articles-content, .nav-articles-content {
+  display: none;
+  background-color: white;
+  width:fit-content;
+  
+  
 }
 
 .nav-articles > h6,

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostrar Div ao Clicar</title>
+  <style>
+    /* Adicione algum estilo conforme necessário */
+    .nav {
+      display: flex;
+    }
+
+    .nav-articles,
+    .nav-about {
+      flex: 1;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .nav-articles-content {
+      display: none;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+      flex: 1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-articles"><h6>Articles</h6></div>
+    <div class="nav-articles-content">
+      <p>Texto da div que deve aparecer ao clicar em Articles.</p>
+    </div>
+    <div class="nav-about"><h6>About</h6></div>
+  </nav>
+
+  <script>
+    // Obtenha a referência para o elemento .nav-articles
+    var navArticles = document.querySelector('.nav-articles');
+
+    // Obtenha a referência para o elemento .nav-articles-content
+    var navArticlesContent = document.querySelector('.nav-articles-content');
+
+    // Adicione um ouvinte de evento de clique ao elemento .nav-articles
+    navArticles.addEventListener('click', function() {
+      // Alternar a visibilidade do elemento .nav-articles-content
+      if (navArticlesContent.style.display === 'none') {
+        navArticlesContent.style.display = 'block';
+      } else {
+        navArticlesContent.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
