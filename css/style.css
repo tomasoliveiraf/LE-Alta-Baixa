@@ -74,7 +74,6 @@ p {
   font-family: "Linux Libertine";
 }
 
-
 b {
   color: inherit;
   font-size: inherit;
@@ -87,7 +86,6 @@ section.home {
   height: 100vh;
   position: relative;
 }
-
 
 /* HEADER */
 .header {
@@ -161,17 +159,13 @@ h1.header-title {
   background-color: white;
   height: 100%;
   width: 30em;
-  <<<<<<< Updated upstream=======
 }
-
-
 
 .nav-about-content {
   display: none;
   background-color: white;
   height: 100%;
   width: 55em;
-  >>>>>>>Stashed changes
 }
 
 .nav-content {
@@ -185,20 +179,18 @@ h1.header-title {
   padding: 1em;
 }
 
-.nav-about-content>.nav-content {
+.nav-about-content > .nav-content {
   width: 100%;
   padding: 5em;
 }
-
-
 
 .nav-articles-content .nav-content {
   border-bottom: 1px solid black;
   width: 100%;
 }
 
-.nav-articles>h6,
-.nav-about>h6 {
+.nav-articles > h6,
+.nav-about > h6 {
   position: absolute;
   bottom: 0;
   padding: 1em 1em 0;
