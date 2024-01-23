@@ -139,6 +139,16 @@ h1.header-title {
   display: none;
   background-color: white;
   width: fit-content;
+  height: 100%;
+
+
+}
+
+.nav-articles-content > ul
+.nav-articles-content > p{
+  position: absolute;
+  top: 0;
+
 }
 
 .nav-articles > h6,
