@@ -74,13 +74,6 @@ p {
   font-family: "Linux Libertine";
 }
 
-/* GRELHA */
-section.home {
-  /* width: 100%; */
-  height: 100vh;
-  position: relative;
-}
-
 /* HEADER */
 .header {
   width: 100%;
@@ -204,9 +197,11 @@ h1.header-title {
 
 .article-grid {
   width: 100%;
-  height: calc(100% / 3 - 1em);
+  max-width: 100%;
+  height: calc(100% / 3 - 1em); /* Dividir em 3 partes iguais */
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, auto);
   column-gap: 1em;
   padding-top: 1em;
 }
