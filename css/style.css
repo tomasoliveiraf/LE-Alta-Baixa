@@ -8,8 +8,8 @@
   src: url("../fonts/LinLibertine_DR.ttf");
 }
 
-a{
-  color: inherit; 
+a {
+  color: inherit;
   font-size: inherit;
   text-decoration: none;
 }
@@ -134,7 +134,6 @@ h1.header-title {
 .nav-about {
   cursor: pointer;
   user-select: none;
-
 }
 
 .nav-articles,
@@ -147,7 +146,6 @@ h1.header-title {
 
   border-left: 1px solid black;
   background-color: white;
-
 }
 
 .nav-articles-content,
@@ -156,43 +154,35 @@ h1.header-title {
   background-color: white;
   height: 100%;
   width: 30em;
-  
-
-
 }
 
-.nav-content{
-
+.nav-content {
   position: absolute;
   top: 0;
-
 }
 
 .nav-content h6 {
-width: 100%;
+  width: 100%;
   border-top: 1px solid black;
   padding: 1em;
 }
 
-.nav-about-content>.nav-content {
+.nav-about-content > .nav-content {
   width: 100%;
-    padding: 1em;
-  }
-  
+  padding: 1em;
+}
 
 .nav-articles-content .nav-content {
-  border-bottom:1px solid black ;
+  border-bottom: 1px solid black;
   width: 100%;
-  }
+}
 
-
-
-.nav-articles>h6,
-.nav-about>h6 {
+.nav-articles > h6,
+.nav-about > h6 {
   position: absolute;
   bottom: 0;
-padding: 1em 1em 0 ;
-transform-origin: 0 0;
+  padding: 1em 1em 0;
+  transform-origin: 0 0;
   transform: rotate(-90deg);
 }
 
@@ -216,17 +206,23 @@ transform-origin: 0 0;
 .article-grid {
   width: 100%;
   height: 95%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  padding-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
 .article-grid-container {
-  width: calc(100% / 12 * 4 - 1rem);
-  /* 4 colunas */
-  height: calc(100% / 3 - 1rem);
+  width: 100%;
+  height: 100%;
+  /* height: calc(100% / 3 - 1rem); */
   padding: 2em;
   border: 1px solid black;
+  overflow: auto;
+  resize: horizontal;
+}
+
+.article-content {
+  width: 100%;
+  height: 100%;
 }
