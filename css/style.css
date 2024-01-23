@@ -8,6 +8,12 @@
   src: url("../fonts/LinLibertine_DR.ttf");
 }
 
+a{
+  color: inherit; 
+  font-size: inherit;
+  text-decoration: none;
+}
+
 /* GERAL */
 * {
   margin: 0;
@@ -141,6 +147,7 @@ h1.header-title {
 
   border-left: 1px solid black;
   background-color: white;
+
 }
 
 .nav-articles-content,
@@ -149,6 +156,9 @@ h1.header-title {
   background-color: white;
   height: 100%;
   width: 30em;
+  
+
+
 }
 
 .nav-content{
@@ -181,8 +191,8 @@ width: 100%;
 .nav-about>h6 {
   position: absolute;
   bottom: 0;
-
-  transform-origin: 0 0;
+padding: 1em 1em 0 ;
+transform-origin: 0 0;
   transform: rotate(-90deg);
 }
 
