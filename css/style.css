@@ -88,13 +88,15 @@ section.home {
 }
 
 h1.header-title {
-  width: calc(100% / 12 * 6); /* 6 colunas */
+  width: calc(100% / 12 * 6);
+  /* 6 colunas */
   font-family: "Futura Std";
   text-align: center;
 }
 
 .header-rect {
-  width: calc(100% / 12 * 2); /* 2 colunas */
+  width: calc(100% / 12 * 2);
+  /* 2 colunas */
   height: 100%;
   padding: 2em;
   border: 2px solid black;
@@ -119,13 +121,14 @@ h1.header-title {
   right: 0;
   height: 100%;
   font-size: 0;
+  display: inline-flex;
 }
 
 .nav-articles,
 .nav-about {
-  display: inline-block;
   cursor: pointer;
   user-select: none;
+
 }
 
 .nav-articles,
@@ -145,17 +148,37 @@ h1.header-title {
   display: none;
   background-color: white;
   height: 100%;
+  width: 30em;
 }
 
-.nav-articles-content > ul,
-.nav-about-content > p {
+.nav-content{
+
   position: absolute;
   top: 0;
-  width: fit-content;
+
 }
 
-.nav-articles > h6,
-.nav-about > h6 {
+.nav-content h6 {
+width: 100%;
+  border-top: 1px solid black;
+  padding: 1em;
+}
+
+.nav-about-content>.nav-content {
+  width: 100%;
+    padding: 1em;
+  }
+  
+
+.nav-articles-content .nav-content {
+  border-bottom:1px solid black ;
+  width: 100%;
+  }
+
+
+
+.nav-articles>h6,
+.nav-about>h6 {
   position: absolute;
   bottom: 0;
 
@@ -191,7 +214,8 @@ h1.header-title {
 }
 
 .article-grid-container {
-  width: calc(100% / 12 * 4 - 1rem); /* 4 colunas */
+  width: calc(100% / 12 * 4 - 1rem);
+  /* 4 colunas */
   height: calc(100% / 3 - 1rem);
   padding: 2em;
   border: 1px solid black;
