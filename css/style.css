@@ -197,11 +197,10 @@ h1.header-title {
 
 .article-grid {
   width: 100%;
-  max-width: 100%;
   height: calc(100% / 3 - 1em); /* Dividir em 3 partes iguais */
 
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 1em;
   padding-top: 1em;
 }
