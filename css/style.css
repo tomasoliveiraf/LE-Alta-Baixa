@@ -121,34 +121,36 @@ h1.header-title {
 }
 
 .nav-articles,
+.nav-about {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-articles,
 .nav-about,
 .nav-articles-content,
-.nav-articles-content {
+.nav-about-content {
   width: 5em;
   height: 100%;
   position: relative;
-  display: inline-block;
 
   border-left: 1px solid black;
   background-color: white;
-  cursor: pointer;
 }
 
 .nav-articles-content,
-.nav-articles-content {
+.nav-about-content {
   display: none;
   background-color: white;
-  width: fit-content;
   height: 100%;
-
-
 }
 
-.nav-articles-content > ul
-.nav-articles-content > p{
+.nav-articles-content > ul,
+.nav-about-content > p {
   position: absolute;
   top: 0;
-
+  width: fit-content;
 }
 
 .nav-articles > h6,
