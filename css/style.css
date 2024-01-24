@@ -145,7 +145,8 @@ h1.header-title {
 .nav-articles,
 .nav-about,
 .nav-articles-content,
-.nav-about-content, .nav-title {
+.nav-about-content,
+.nav-title {
   width: 3.5vw;
   height: 100%;
   position: relative;
@@ -168,13 +169,12 @@ h1.header-title {
   width: 45vw;
 }
 
-.nav-title{
+.nav-title {
   background-color: white;
   height: 100%;
   width: 22vw;
   position: relative;
   display: none;
-
 }
 
 .nav-content {
@@ -210,15 +210,13 @@ h1.header-title {
 .nav-title > h1 {
   cursor: pointer;
   position: absolute;
-  bottom: 50%; 
-  left: 50%; 
-  transform: translate(-12%, 300%) rotate(-90deg); 
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-12%, 300%) rotate(-90deg);
   transform-origin: 0 0;
   font-size: 12em;
-  white-space: nowrap; 
- 
+  white-space: nowrap;
 }
-
 
 /* CANVAS */
 .canvas {
@@ -236,11 +234,10 @@ h1.header-title {
   padding-bottom: 1em;
   /* Espaço entre texto e linha horizontal */
 }
-
+/* 
 .article-grid {
   width: 100%;
   height: calc(100% / 3 - 1em);
-  /* Dividir em 3 partes iguais */
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -255,4 +252,43 @@ h1.header-title {
   border: 1px solid black;
   overflow: auto;
   resize: horizontal;
+} */
+
+.article-grid {
+  width: 100%;
+  height: calc(100% / 3 - 1em);
+  display: grid;
+  grid-template-areas: "leftcol leftdragbar middlecol rightdragbar rightcol";
+  grid-template-columns: 1fr 5px 1fr 5px 1fr;
+
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.article-left-column,
+.article-middle-column,
+.article-right-column {
+  overflow: auto;
+}
+
+.article-left-column {
+  grid-area: leftcol;
+}
+.article-middle-column {
+  grid-area: middlecol;
+}
+.article-right-column {
+  grid-area: rightcol;
+}
+
+.article-left-dragbar {
+  background-color: black;
+  grid-area: leftdragbar;
+  cursor: ew-resize;
+}
+.article-right-dragbar {
+  background-color: black;
+  grid-area: rightdragbar;
+  cursor: ew-resize;
 }
