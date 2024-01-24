@@ -31,7 +31,7 @@ section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   height: 100vh;
-  width: calc(100% - 10em);
+  width: calc(100% - 7vw);
   padding: 2em;
 }
 
