@@ -145,8 +145,8 @@ h1.header-title {
 .nav-articles,
 .nav-about,
 .nav-articles-content,
-.nav-about-content {
-  width: 5em;
+.nav-about-content, .nav-title {
+  width: 3.5vw;
   height: 100%;
   position: relative;
 
@@ -158,14 +158,23 @@ h1.header-title {
   display: none;
   background-color: white;
   height: 100%;
-  width: 30em;
+  width: 26vw;
 }
 
 .nav-about-content {
   display: none;
   background-color: white;
   height: 100%;
-  width: 55em;
+  width: 45vw;
+}
+
+.nav-title{
+  background-color: white;
+  height: 100%;
+  width: 22vw;
+  position: relative;
+  display: none;
+
 }
 
 .nav-content {
@@ -197,6 +206,18 @@ h1.header-title {
   transform-origin: 0 0;
   transform: rotate(-90deg);
 }
+
+.nav-title > h1 {
+  position: absolute;
+  bottom: 50%; 
+  left: 50%; 
+  transform: translate(-12%, 300%) rotate(-90deg); 
+  transform-origin: 0 0;
+  font-size: 12em;
+  white-space: nowrap; 
+ 
+}
+
 
 /* CANVAS */
 .canvas {
