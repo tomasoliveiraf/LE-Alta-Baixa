@@ -270,6 +270,7 @@ h1.header-title {
 .article-middle-column,
 .article-right-column {
   overflow: auto;
+  padding: 1em;
 }
 
 .article-left-column {

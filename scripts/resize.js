@@ -43,8 +43,6 @@ function OnDrag(event, gridId) {
     page.style.gridTemplateColumns = newColDefn;
 
     document.body.style.userSelect = "none";
-
-    event.preventDefault();
   }
 }
 
