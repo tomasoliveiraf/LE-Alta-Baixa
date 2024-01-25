@@ -33,7 +33,6 @@ function processText(newTextContent) {
 }
 
 function createHeader() {
-  // Create a common header for each section
   const header = document.createElement("div");
   header.classList.add("article-header");
 
