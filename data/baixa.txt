@@ -51,4 +51,4 @@ Sometimes I think that Massimo Vignelli may be using too many typefaces, not too
 ##### 13. Because you can't not.
 Princeton Architectural Press is about to publish a collection of essays I've written, many of which first appeared here on Design Observer. I wanted it to feel like a real book for readers — it has no pictures — so I asked Abbott to design it. He suggested we set each one of the 79 pieces in a different typeface. I loved this idea, but wasn't sure how far he'd want to go with it. "What about the one called 'I Hate ITC Garamond?'" I asked him. "Would we set it in ITC Garamond?" He looked at me as if I was crazy. "Of course," he said.
 
-#### The book is beautiful, by the way, and not the least bit slutty.
+### The book is beautiful, by the way, and not the least bit slutty.
