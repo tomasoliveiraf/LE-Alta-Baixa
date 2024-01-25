@@ -86,7 +86,7 @@ function createGrid(sectionContainer, gridContent) {
       );
       gridElement.appendChild(dragBar);
     }
-    if (i === 1) {
+    if (i === 2) {
       const dragBar = document.createElement("div");
       dragBar.classList.add("article-right-dragbar");
       dragBar.setAttribute(
