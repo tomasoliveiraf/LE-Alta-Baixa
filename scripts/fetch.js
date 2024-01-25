@@ -18,7 +18,7 @@ function processText(newTextContent) {
     document.body.appendChild(sectionContainer);
 
     //APPEND DO HEADER
-    const header = createArticleHeader();
+    const header = createHeader();
     sectionContainer.appendChild(header);
 
     //CONTEÚDO DE CADA COLUNA
