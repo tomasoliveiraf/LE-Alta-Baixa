@@ -5,7 +5,6 @@ function loadText(filePath, articleHeader) {
       return response.text();
     })
     .then(function (data) {
-      console.log("Raw Text Data:", data);
       processText(data, articleHeader);
     });
 }
