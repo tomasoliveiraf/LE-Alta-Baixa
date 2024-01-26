@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Linux Libertine";
-  src: url("../fonts/LinLibertine_DR.ttf");
+  src: url("../fonts/LinLibertine_DR.ttf") format("truetype");
 }
 
 a {
