@@ -121,7 +121,7 @@ function createGrid(sectionContainer, gridContent) {
 
 //LOAD DO ARTIGO DA BAIXA
 loadText(
-  "../articles/baixa.txt",
+  "./articles/baixa.txt",
   "Alta & Baixa,Thirteen Ways of Looking at a Typeface,Artigo 1"
 );
 //LOAD DO ARTIGO DA ALTA
