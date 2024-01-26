@@ -100,8 +100,9 @@ section.home {
 }
 
 h1.header-title {
-  width: calc(100% / 12 * 6);
-  /* 6 colunas */
+  width: fit-content;
+  /* 6 colunas 
+  width: calc(100% / 12 * 6);*/
   font-family: "Futura Std";
   text-align: center;
   white-space: nowrap;
@@ -109,9 +110,10 @@ h1.header-title {
 }
 
 .header-rect {
-  width: fit-content;
-  /* 2 colunas 
-   width: calc(100% / 12 * 2);*/
+
+  /* 2 colunas
+  width: calc(100% / 12 * 6); */
+   width: fit-content;
   text-align: left;
   height: 100%;
   padding: 2.5em 2em 2.5em 2em;
