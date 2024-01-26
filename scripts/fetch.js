@@ -1,21 +1,30 @@
 //FETCH DO FICHEIRO TEXTO
-function loadText(filePath, articleHeader) {
+function loadText(filePath, articleHeader, articleType) {
   fetch(filePath)
     .then(function (response) {
       return response.text();
     })
     .then(function (data) {
-      processText(data, articleHeader);
+      processText(data, articleHeader, articleType);
     });
 }
 
-function processText(newTextContent, articleHeader) {
+function processText(newTextContent, articleHeader, articleType) {
   const sections = newTextContent.split("\n\n\n");
 
   sections.forEach((sectionContent) => {
     //CRIAR AS SECÇÕES
     const sectionContainer = document.createElement("section");
-    document.body.appendChild(sectionContainer);
+
+    //DIFERENCIAR ARTIGOS DA BAIXA DOS DA ALTA
+    const articleContainerAlta = document.querySelector("#alta-container");
+    const articleContainerBaixa = document.querySelector("#baixa-container");
+
+    if (articleType === "alta") {
+      articleContainerAlta.appendChild(sectionContainer);
+    } else if (articleType === "baixa") {
+      articleContainerBaixa.appendChild(sectionContainer);
+    }
 
     //APPEND DO HEADER
     const header = createHeader(articleHeader);
@@ -71,7 +80,7 @@ function createGrid(sectionContainer, gridContent) {
     column.classList.add(`article-${["left", "middle", "right"][i]}-column`);
 
     //DRAGBARS
-    if (i === 0) {
+    if (i === 1) {
       const dragBar = document.createElement("div");
       dragBar.classList.add("article-left-dragbar");
       dragBar.setAttribute(
@@ -119,13 +128,15 @@ function createGrid(sectionContainer, gridContent) {
   });
 }
 
+//LOAD DO ARTIGO DA ALTA
+loadText(
+  "../articles/alta.txt",
+  "Alta & Baixa,Using Autoencoders to Generate Skeleton-based Typography,Artigo 1",
+  "alta"
+);
 //LOAD DO ARTIGO DA BAIXA
 loadText(
   "./articles/baixa.txt",
-  "Alta & Baixa,Thirteen Ways of Looking at a Typeface,Artigo 1"
+  "Alta & Baixa,Thirteen Ways of Looking at a Typeface,Artigo 2",
+  "baixa"
 );
-//LOAD DO ARTIGO DA ALTA
-// loadText(
-//     "../articles/alta.txt",
-//     "Alta & Baixa,Thirteen Ways of Looking at a Typeface,Artigo 1"
-//   );
