@@ -8,13 +8,10 @@
   src: url("../fonts/FUTURASTD-MEDIUM.OTF");
 }
 
-
 @font-face {
   font-family: "Linux Libertine";
   src: url("../fonts/LinLibertine_DR.ttf") format("truetype");
 }
-
-
 
 a {
   color: inherit;
@@ -199,11 +196,8 @@ h1.header-title {
   width: 100%;
   border-top: 1px solid black;
   padding: 1.5em;
-  font-family: 'Futura Regular';
+  font-family: "Futura Regular";
 }
-
-
-
 
 .nav-about-content > .nav-content {
   width: 100%;
@@ -273,13 +267,13 @@ h1.header-title {
 .article-middle-column,
 .article-right-column {
   overflow: auto;
+  padding: 2em;
 }
 
 .article-left-column *,
 .article-middle-column *,
 .article-right-column * {
   margin-bottom: 0.5em;
-  padding: 20px;
 }
 
 .article-left-column img,

@@ -85,8 +85,7 @@ Fig. 2. Diagram of the architecture of our approach.
 The VAE and sketch decoder trained for 50 epochs with a learning rate of 0.001 and a batch size of 256. As mentioned before, we use 2623 64 × 64px black and white images of skeletons for each capital letter of the Latin alphabet, so our dataset is constituted of 68 198 images.
 
 
-Jéssica Parente*, Luís Gonçalo*, Tiago Martins,
-João Miguel Cunha, João Bicker and Penousal Machado
+Jéssica Parente*, Luís Gonçalo*, Tiago Martins, João Miguel Cunha, João Bicker and Penousal Machado
 * These authors contributed equally to this work
 
 ### Using Autoencoders to Generate Skeleton-based Typography
