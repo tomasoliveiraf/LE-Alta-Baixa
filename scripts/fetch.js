@@ -130,7 +130,7 @@ loadText(
 //     "Alta & Baixa,Thirteen Ways of Looking at a Typeface,Artigo 1"
 //   );
 
-fetch("../articles/baixa.txt")
+fetch("/articles/baixa.txt")
   .then((response) => {
     if (!response.ok) {
       throw new Error(
