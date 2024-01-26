@@ -55,8 +55,6 @@ function createHeader(articleHeader) {
       paragraph.textContent = title;
 
       a.appendChild(paragraph);
-
-      //   a.textContent = title;
       header.appendChild(a);
     } else {
       const paragraph = document.createElement("p");
