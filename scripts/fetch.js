@@ -130,7 +130,7 @@ function createGrid(sectionContainer, gridContent) {
 
 //LOAD DO ARTIGO DA ALTA
 loadText(
-  "../articles/alta.txt",
+  "./articles/alta.txt",
   "Alta & Baixa,Using Autoencoders to Generate Skeleton-based Typography,Artigo 1",
   "alta"
 );
