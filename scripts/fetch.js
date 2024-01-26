@@ -46,10 +46,23 @@ function createHeader(articleHeader) {
   header.classList.add("article-header");
 
   const titles = articleHeader.split(",");
-  titles.forEach((title) => {
-    const paragraph = document.createElement("p");
-    paragraph.textContent = title;
-    header.appendChild(paragraph);
+  titles.forEach((title, index) => {
+    if (index === 0) {
+      const a = document.createElement("a");
+      a.href = "#home";
+
+      const paragraph = document.createElement("p");
+      paragraph.textContent = title;
+
+      a.appendChild(paragraph);
+
+      //   a.textContent = title;
+      header.appendChild(a);
+    } else {
+      const paragraph = document.createElement("p");
+      paragraph.textContent = title;
+      header.appendChild(paragraph);
+    }
   });
 
   return header;
