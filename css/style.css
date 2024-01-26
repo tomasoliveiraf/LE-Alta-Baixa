@@ -217,7 +217,6 @@ h1.header-title {
 
 .nav-articles > h6,
 .nav-about > h6 {
-
   position: absolute;
   bottom: 0;
   padding: 25% 0 0 25%;
@@ -226,22 +225,25 @@ h1.header-title {
 }
 
 .nav-title > h1 {
-  position: absolute;
-  bottom: 50%; 
-  left: 50%; 
-  transform: translate(-10%, 390%) rotate(-90deg); 
-  transform-origin: 0 0;
-  font-size: 9em;
-  white-space: nowrap; 
   cursor: pointer;
- 
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-12%, 300%) rotate(-90deg);
+  transform-origin: 0 0;
+  font-size: 12em;
+  white-space: nowrap;
 }
-
 
 /* CANVAS */
 .canvas {
   height: 85%;
-  background-color: gray;
+}
+
+.canvas > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* ARTIGOS */
@@ -271,7 +273,21 @@ h1.header-title {
 .article-middle-column,
 .article-right-column {
   overflow: auto;
-  padding: 2em;
+}
+
+.article-left-column *,
+.article-middle-column *,
+.article-right-column * {
+  margin-bottom: 0.5em;
+  padding: 20px;
+}
+
+.article-left-column img,
+.article-middle-column img,
+.article-right-column img {
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
 }
 
 .article-left-column {

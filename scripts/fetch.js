@@ -105,17 +105,32 @@ function createGrid(sectionContainer, gridContent) {
     //ANALISAR O COMEÇO DE TODAS AS LINHAS
     lines.forEach((line) => {
       //CRIAR HEADINGS E PARAGRAFOS
-      if (line.startsWith("##### ")) {
+      if (line.startsWith("_IMG ")) {
+        //IMG
+        const img = document.createElement("img");
+        img.src = "./images/" + line.substring(5);
+        column.appendChild(img);
+      } else if (line.startsWith("###### ")) {
         //H5
-        const heading2 = document.createElement("h5");
-        heading2.textContent = line.substring(6);
-        column.appendChild(heading2);
+        const heading6 = document.createElement("h6");
+        heading6.textContent = line.substring(7);
+        column.appendChild(heading6);
+      } else if (line.startsWith("##### ")) {
+        //H5
+        const heading5 = document.createElement("h5");
+        heading5.textContent = line.substring(6);
+        column.appendChild(heading5);
+      } else if (line.startsWith("#### ")) {
+        //H4
+        const heading4 = document.createElement("h4");
+        heading4.textContent = line.substring(5);
+        column.appendChild(heading4);
       } else if (line.startsWith("### ")) {
         //H3
-        const heading1 = document.createElement("h3");
-        heading1.style.textAlign = "center";
-        heading1.textContent = line.substring(4);
-        column.appendChild(heading1);
+        const heading3 = document.createElement("h3");
+        heading3.style.textAlign = "center";
+        heading3.textContent = line.substring(4);
+        column.appendChild(heading3);
       } else {
         //PARAGRAFOS
         const paragraph = document.createElement("p");
