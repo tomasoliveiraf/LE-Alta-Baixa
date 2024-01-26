@@ -11,15 +11,6 @@
         padding: 2em;
     }
 
-    .nav-articles,
-    .nav-about,
-    .nav-articles-content,
-    .nav-about-content,
-    .nav-title {
-        width: 5vw;
-
-    }
-
     .header {
         justify-content: center
     }
@@ -60,6 +51,7 @@
         width: 100%;
         border-top: 1px solid black;
         padding: 1em;
+        
     }
 
     .nav-about-content>.nav-content {
