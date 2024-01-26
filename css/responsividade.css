@@ -1,0 +1,127 @@
+/* Estilos para telas pequenas (telefones, por exemplo) */
+@media only screen and (max-width: 767px) {
+    body {
+        background-color: rebeccapurple;
+    }
+
+    section {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        height: 100vh;
+        width: calc(100% - 7vw);
+        padding: 2em;
+    }
+
+    .nav-articles,
+    .nav-about,
+    .nav-articles-content,
+    .nav-about-content,
+    .nav-title {
+        width: 5vw;
+
+    }
+
+    .nav {
+        position: fixed;
+        z-index: 2;
+        width: 100vh;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .nav-articles,
+    .nav-about,
+    .nav-articles-content,
+    .nav-about-content,
+    .nav-title {
+        display: flex;
+        height: 7vh;
+        width: 100vh;
+        position: relative;
+        border-top: 1px solid black;
+
+    }
+
+    .nav-articles>h6,
+    .nav-about>h6 {
+        padding: 1em;
+        transform: translate(0, 0) rotate(0);
+
+    }
+
+
+
+
+    .nav-articles-content {
+        display: none;
+        background-color: white;
+        width: 100%;
+        height: 14vh;
+        border-top: 0px solid black;
+
+    }
+
+    .nav-about-content {
+        display: none;
+        background-color: white;
+        width: 100%;
+        height: 45vh;
+    }
+
+    .nav-title {
+        background-color: white;
+        width: 100%;
+        height: 22vh;
+        position: relative;
+        display: none;
+
+        display: flex;
+
+
+    }
+
+    .nav-title>h1 {
+        cursor: pointer;
+
+        font-size: 5em;
+        transform: translate(0, 0) rotate(0);
+        position: relative;
+        bottom: 0;
+        left: 0;
+        white-space: nowrap;
+        text-align: left;
+        display: flex;
+        justify-content: left;
+        margin: auto;
+    }
+
+    br {
+        display: none;
+    }
+
+}
+
+/* Estilos para telas médias (tablets, por exemplo) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        background-color: red;
+    }
+
+    .nav-articles,
+    .nav-about,
+    .nav-articles-content,
+    .nav-about-content,
+    .nav-title {
+        width: 5vw;
+
+    }
+}
+
+/* Estilos para telas grandes (desktops, por exemplo) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+/* Estilos para telas extra grandes (monitores grandes, por exemplo) */
+@media only screen and (min-width: 1200px) {}
