@@ -214,15 +214,17 @@ h1.header-title {
 }
 
 .nav-title > h1 {
-  cursor: pointer;
   position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-12%, 300%) rotate(-90deg);
+  bottom: 50%; 
+  left: 50%; 
+  transform: translate(-10%, 390%) rotate(-90deg); 
   transform-origin: 0 0;
-  font-size: 12em;
-  white-space: nowrap;
+  font-size: 9em;
+  white-space: nowrap; 
+  cursor: pointer;
+ 
 }
+
 
 /* CANVAS */
 .canvas {
