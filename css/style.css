@@ -4,9 +4,17 @@
 }
 
 @font-face {
+  font-family: "Futura Regular";
+  src: url("../fonts/FUTURASTD-MEDIUM.OTF");
+}
+
+
+@font-face {
   font-family: "Linux Libertine";
   src: url("../fonts/LinLibertine_DR.ttf") format("truetype");
 }
+
+
 
 a {
   color: inherit;
@@ -190,8 +198,12 @@ h1.header-title {
 .nav-content h6 {
   width: 100%;
   border-top: 1px solid black;
-  padding: 1em;
+  padding: 1.5em;
+  font-family: 'Futura Regular';
 }
+
+
+
 
 .nav-about-content > .nav-content {
   width: 100%;

@@ -20,11 +20,6 @@
 
     }
 
-    .nav-content {
-        border: 0px solid black;
-
-    }
-
     .header {
         justify-content: center
     }
@@ -61,7 +56,22 @@
 
     }
 
+    .nav-content h6 {
+        width: 100%;
+        border-top: 1px solid black;
+        padding: 1em;
+    }
 
+    .nav-about-content>.nav-content {
+        width: 100%;
+        padding: 5em;
+    }
+
+    .nav-articles-content .nav-content {
+        border-bottom: 0px solid black;
+        width: 100%;
+   
+    }
 
 
     .nav-articles-content {
@@ -71,8 +81,10 @@
         height: 16vh;
         border: 0px solid black;
 
+
     }
 
+ 
     .nav-about-content {
         display: none;
         background-color: white;
