@@ -106,20 +106,17 @@ h1.header-title {
   font-family: "Futura Std";
   text-align: center;
   white-space: nowrap;
-
 }
 
 .header-rect {
-
   /* 2 colunas
   width: calc(100% / 12 * 6); */
-   width: fit-content;
+  width: fit-content;
   text-align: left;
   height: 100%;
   padding: 2.5em 2em 2.5em 2em;
   border: 2px solid black;
   white-space: nowrap;
-
 }
 
 .header-rect-info {
@@ -183,7 +180,6 @@ h1.header-title {
   width: 22vw;
   position: relative;
   display: none;
-  
 }
 
 .nav-content {
@@ -243,25 +239,6 @@ h1.header-title {
   padding-bottom: 1em;
   /* Espaço entre texto e linha horizontal */
 }
-/* 
-.article-grid {
-  width: 100%;
-  height: calc(100% / 3 - 1em);
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 1em;
-  padding-top: 1em;
-}
-
-.article-grid-container {
-  width: 100%;
-  height: 100%;
-  padding: 2em;
-  border: 1px solid black;
-  overflow: auto;
-  resize: horizontal;
-} */
 
 .article-grid {
   width: 100%;
