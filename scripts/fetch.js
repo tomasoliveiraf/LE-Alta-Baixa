@@ -1,15 +1,15 @@
 //FETCH DO FICHEIRO TEXTO
-function loadText() {
-  fetch("../data/baixa.txt")
+function loadText(filePath, articleHeader) {
+  fetch(filePath)
     .then(function (response) {
       return response.text();
     })
     .then(function (data) {
-      processText(data);
+      processText(data, articleHeader);
     });
 }
 
-function processText(newTextContent) {
+function processText(newTextContent, articleHeader) {
   const sections = newTextContent.split("\n\n\n");
 
   sections.forEach((sectionContent) => {
@@ -18,7 +18,7 @@ function processText(newTextContent) {
     document.body.appendChild(sectionContainer);
 
     //APPEND DO HEADER
-    const header = createHeader();
+    const header = createHeader(articleHeader);
     sectionContainer.appendChild(header);
 
     //CONTEÚDO DE CADA COLUNA
@@ -32,16 +32,11 @@ function processText(newTextContent) {
   });
 }
 
-function createHeader() {
+function createHeader(articleHeader) {
   const header = document.createElement("div");
   header.classList.add("article-header");
 
-  const titles = [
-    "Alta & Baixa",
-    "Thirteen Ways of Looking at a Typeface",
-    "Artigo 1",
-  ];
-
+  const titles = articleHeader.split(",");
   titles.forEach((title) => {
     const paragraph = document.createElement("p");
     paragraph.textContent = title;
@@ -124,4 +119,13 @@ function createGrid(sectionContainer, gridContent) {
   });
 }
 
-loadText();
+//LOAD DO ARTIGO DA BAIXA
+loadText(
+  "../articles/baixa.txt",
+  "Alta & Baixa,Thirteen Ways of Looking at a Typeface,Artigo 1"
+);
+//LOAD DO ARTIGO DA ALTA
+// loadText(
+//     "../articles/alta.txt",
+//     "Alta & Baixa,Thirteen Ways of Looking at a Typeface,Artigo 1"
+//   );
