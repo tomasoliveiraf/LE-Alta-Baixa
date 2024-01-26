@@ -104,14 +104,20 @@ h1.header-title {
   /* 6 colunas */
   font-family: "Futura Std";
   text-align: center;
+  white-space: nowrap;
+
 }
 
 .header-rect {
-  width: calc(100% / 12 * 2);
-  /* 2 colunas */
+  width: fit-content;
+  /* 2 colunas 
+   width: calc(100% / 12 * 2);*/
+  text-align: left;
   height: 100%;
-  padding: 2em;
+  padding: 2.5em 2em 2.5em 2em;
   border: 2px solid black;
+  white-space: nowrap;
+
 }
 
 .header-rect-info {
