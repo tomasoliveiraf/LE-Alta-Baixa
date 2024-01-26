@@ -70,7 +70,7 @@
     .nav-articles-content .nav-content {
         border-bottom: 0px solid black;
         width: 100%;
-   
+
     }
 
 
@@ -84,7 +84,7 @@
 
     }
 
- 
+
     .nav-about-content {
         display: none;
         background-color: white;
@@ -98,14 +98,11 @@
         height: 18vh;
         position: relative;
         display: none;
-        display: flex;
-
 
     }
 
     .nav-title>h1 {
         cursor: pointer;
-
         font-size: 5em;
         transform: translate(0, 0) rotate(0);
         position: relative;
@@ -113,7 +110,6 @@
         left: 0;
         white-space: nowrap;
         text-align: left;
-        display: flex;
         justify-content: left;
         margin: auto;
     }
