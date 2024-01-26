@@ -1,11 +1,11 @@
 _IMG Fig 10.png
 Fig. 10. Second example of application of the generated skeletons into glyphs to create a typographic identity. The glyphs present in the image are the result of the interpolation of two input skeleton glyphs.
 
-##### 5 Conclusion and Discussion
+#### 5 Conclusion and Discussion
 Since its emergence, type design has been adapting to technological advances. Nowadays, most typefaces are developed by type designers, who study the design and anatomy of each character with great precision. Type design is a difficult and time-consuming process. Our approach takes advantage of the knowledge present in the design of a typeface and the computational possibilities that ANNs provide. We propose a VAE combined with an Autoregressive model to generate glyphs’ skeletons by interpolating existing ones. Our contributions are the following, a sketch decoder capable of (i) reconstructing images of glyphs’ skeletons using a single stroke, (ii) controlling font styles by navigating the latent space, (iii) interpolating between two skeletons to create new ones. By creating interpolations between existing fonts we develop a method to help designers in making their artificial variable fonts, easing the usual glyph production. We also explored a feature of a skeleton extraction library, which calculates the stroke width at each point of the letter skeleton, to produce a fill for the generated skeletons. By interpolating between skeletons of different letters we are creating new glyph forms that resemble other existing glyphs. This opens up new exploration possibilities for the future. We envision that our approach can find use as a tool for graphic designers to facilitate font design. We can employ this system to generate new skeletons, which the designer can fill with the desired style, but also be used as inspiration seed to create new glyphs.
 We expect to make several future contributions. First, we want to change the architecture of the sketch decoder to be able to use multiple strokes. In some cases, our approach was able to draw skeleton letters that require more than one line by overlapping them. However, if the sketch decoder had access to multiple strokes, this problem could be solved more easily. Finally, we intend to change the input of the network so it can receive a vector version of the skeletons instead of a pixel-based image. This way we can work with an end-to-end architecture focused on vector format leading to better quality skeletons without any loss of information.
 
-##### 6 Acknowledgments
+#### 6 Acknowledgments
 This work is partially funded by national funds through the FCT - Foundation for Science and Technology, I.P., within the scope of the project CISUC - UID/CEC/00326/2020 and by European Social Fund, through the Regional Operational Program Centro 2020, and under the grant SFRH/BD/148706/2019.
 
 
@@ -18,7 +18,7 @@ We also interpolate between skeletons of different letters. By observing the res
 _IMG Fig 7.png
 Fig. 7. Results of the latent space interpolation between skeletons of different letters.
 
-###### 4.4 Transforming skeletons into glyphs
+#### 4.4 Transforming skeletons into glyphs
 So far, we have demonstrated how our system is able to reconstruct and create new skeletons through the exploration of latent space. However, our goal is to develop a tool to support the design process by allowing the creation of artificial variable fonts or morphing fonts, so it is imperative to test the application of the generated skeletons.
 
 As mentioned before, the skeleton extraction library [16] allows, in addition to extracting the points, obtaining the stroke width at each point of the skeleton. When we created the dataset, by extracting the skeletons of the uppercase letters of the Latin alphabet for each font file that we selected, we saved the points of each skeleton and its stroke width to use posteriorly. With these values, we were able to interpolate the stroke width along with the generated skeleton. The process of filling the generated skeletons is the following. First, we randomly choose two skeletons to interpolate. Then, we calculate the stroke width at each point of the generated skeletons. To do this, we calculate the corresponding point on the skeletons that serve as input for the creation of intermediate skeletons. We do this calculation by overlapping the input skeletons and the generated skeleton and calculating the closest match. The stroke width at each point is a result of combining the interpolation of the widths of the input skeletons. Figure 8 shows some results in which each row represents a different interpolation. Looking at the generated glyphs, we can see that they look similar to a regular font. With a few adjustments, we could use them as a variable font. Now, with interpolated fill, the contrast between variations is more visible, because we had another parameter to the glyph design. By splitting the skeleton and the filler we have more visual possibilities because we are not stuck with a filler. In these tests, we use filling in the original fonts to fill in the intermediate ones, but it is not mandatory. We can even use some fonts to create the skeleton and others to create the filling or even use a fixed value along the skeleton. By applying the filling, the interpolated glyphs become more unique, by suffering more alterations when moving between the two input glyphs. For example, in the “S” (Figure 8) we can observe that besides the axis alteration, the glyphs also change in contrast. The generated “S” near the left is styled more like a modern font, with high contrast and serifs. From left to right the contrast inside the generated glyphs turns almost nil and they lost the serifs.
@@ -63,7 +63,7 @@ Over time, the methods and technologies available for type design have improved 
 
 We can also imitate the behaviour of a variable font using Recurrent Neural Networks (RNNs) and interpolate to obtain intermediate results. Lopes et al. [14] model the drawing process of fonts by building sequential generative models of vector graphics. Their model provides a scale-invariant representation of imagery. The latent representation may be systematically exploited to achieve style propagation. Shamir and Rappoport [24] present a parametric feature-based font design approach. The development of a visual design system and the use of constraints for preserving the designer’s intentions create a more natural environment in which high-level parametric behaviours can be defined. By changing the glyph parameters they create several family instances. Also, outside the typographic field, there are some good examples exploring the latent space. Sketch-RNN [7] is an RNN able to construct stroke- based drawings. The network produces sketches of common objects in a vector format and explores the latent space interpolation of various vector images. There is also increased attention to these networks and their application to facilitate the use and combination of fonts. A usual way to combine different fonts is by using fonts from the same family or created by the same designer. Another way is to find fonts that match x-height and ascenders/descenders. Fontjoy [20] is another tool to facilitate the process of mixing and matching typefaces and choosing fonts to use side by side. FontMap [8] and Font-VAE [10] are tools developed with the goal of discovering alternative fonts with the same aesthetics.
 
-##### 3 Approach
+#### 3 Approach
 In this section, we present the developed model that generates new letter skeletons by interpolating existing ones. This process allows us to control the style of the resulting font by navigating the latent space. We explain all the steps taken, from the data collection and editing, passing through the development of the network architecture until the experimentation and analysis of the results.
 
 ###### 3.1 Data
@@ -81,14 +81,14 @@ Finally, we render the produced path in a canvas as a greyscale image that is co
 _IMG Fig 2.png
 Fig. 2. Diagram of the architecture of our approach.
 
-##### 4 Results
+### 4 Results
 The VAE and sketch decoder trained for 50 epochs with a learning rate of 0.001 and a batch size of 256. As mentioned before, we use 2623 64 × 64px black and white images of skeletons for each capital letter of the Latin alphabet, so our dataset is constituted of 68 198 images.
 
 
 Jéssica Parente*, Luís Gonçalo*, Tiago Martins, João Miguel Cunha, João Bicker and Penousal Machado
 * These authors contributed equally to this work
 
-### Using Autoencoders to Generate Skeleton-based Typography
+##### Using Autoencoders to Generate Skeleton-based Typography
 
 University of Coimbra, CISUC, Department of Informatics Engineering {jparente,lgoncalo,tiagofm,jmacunha,bicker,machado}@dei.uc.pt
 
