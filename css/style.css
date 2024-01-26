@@ -205,9 +205,10 @@ h1.header-title {
 
 .nav-articles > h6,
 .nav-about > h6 {
+
   position: absolute;
   bottom: 0;
-  padding: 1em 1em 0;
+  padding: 25% 0 0 25%;
   transform-origin: 0 0;
   transform: rotate(-90deg);
 }
