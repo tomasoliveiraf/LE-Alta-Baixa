@@ -8,7 +8,7 @@
         scroll-snap-align: start;
         scroll-snap-stop: always;
         height: 100vh;
-        width: calc(100% - 7vw);
+        width: calc(100%);
         padding: 2em;
     }
 
@@ -19,6 +19,10 @@
     .nav-title {
         width: 5vw;
 
+    }
+
+    .header {
+        justify-content: center
     }
 
     .nav {
@@ -105,17 +109,76 @@
 }
 
 /* Estilos para telas médias (tablets, por exemplo) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1150px) {
     body {
         background-color: red;
     }
 
+    section {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        height: 100vh;
+        width: calc(100% - 10vw);
+        padding: 2em;
+    }
+
     .nav-articles,
-    .nav-about,
-    .nav-articles-content,
-    .nav-about-content,
-    .nav-title {
+    .nav-about {
         width: 5vw;
+
+    }
+
+    .header {
+        justify-content: center
+    }
+
+    .nav-articles-content {
+        display: none;
+        background-color: white;
+        height: 100%;
+        width: 26vw;
+    }
+
+    .nav-about-content {
+        display: none;
+        background-color: white;
+        height: 100%;
+        width: 45vw;
+    }
+
+    .nav-title {
+        background-color: white;
+        height: 100%;
+        width: 19vw;
+        position: relative;
+        display: none;
+
+    }
+
+    .nav-articles>h6,
+    .nav-about>h6 {
+
+
+        position: absolute;
+        bottom: 0;
+        padding: 30% 1em 0;
+        transform-origin: 0 0;
+        transform: rotate(-90deg);
+    }
+
+    .nav-title>h1 {
+        cursor: pointer;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-10%, 375%) rotate(-90deg);
+        transform-origin: 0 0;
+        font-size: 8em;
+        white-space: nowrap;
+    }
+
+    .header-rect {
+        display: none;
 
     }
 }
