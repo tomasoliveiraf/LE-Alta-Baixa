@@ -129,3 +129,19 @@ loadText(
 //     "../articles/alta.txt",
 //     "Alta & Baixa,Thirteen Ways of Looking at a Typeface,Artigo 1"
 //   );
+
+fetch("../articles/baixa.txt")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch baixa.txt: ${response.status} ${response.statusText}`
+      );
+    }
+    return response.text();
+  })
+  .then((content) => {
+    console.log("Content of baixa.txt:", content);
+  })
+  .catch((error) => {
+    console.error("Error fetching baixa.txt:", error);
+  });
