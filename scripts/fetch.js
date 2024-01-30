@@ -17,8 +17,8 @@ function processText(newTextContent, articleHeader, articleType) {
     const sectionContainer = document.createElement("section");
 
     //DIFERENCIAR ARTIGOS DA BAIXA DOS DA ALTA
-    const articleContainerAlta = document.querySelector("#alta-container");
-    const articleContainerBaixa = document.querySelector("#baixa-container");
+    const articleContainerAlta = document.querySelector("#alta");
+    const articleContainerBaixa = document.querySelector("#baixa");
 
     if (articleType === "alta") {
       articleContainerAlta.appendChild(sectionContainer);

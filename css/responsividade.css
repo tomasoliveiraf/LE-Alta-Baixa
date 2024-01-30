@@ -1,207 +1,180 @@
 /* Estilos para telas pequenas (telefones, por exemplo) */
 @media only screen and (max-width: 767px) {
-    body {
-        background-color: rebeccapurple;
-    }
+  section {
+    height: 100vh;
+    width: calc(100%);
+    padding: 2em;
+  }
 
-    section {
+  .header {
+    justify-content: center;
+  }
 
-        height: 100vh;
-        width: calc(100%);
-        padding: 2em;
-    }
+  .nav {
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+  }
 
+  .nav-articles,
+  .nav-about,
+  .nav-articles-content,
+  .nav-about-content,
+  .nav-title {
+    border-left: 0px solid black;
+    display: flex;
+    height: 8vh;
+    width: 100vw;
+    position: relative;
+    border-top: 1px solid black;
+    min-height: 40px;
+  }
 
-    .header {
-        justify-content: center
-    }
+  .nav-about-content {
+    overflow: auto;
+  }
 
-    .nav {
-        position: fixed;
-        z-index: 2;
-        width: 100vw;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
+  .nav-articles > h6,
+  .nav-about > h6 {
+    padding: 1em;
+    transform: translate(0, 0) rotate(0);
+  }
 
-    }
+  .nav-content h6 {
+    width: 100%;
+    border-top: 1px solid black;
+    padding: 1em;
+  }
 
-    .nav-articles,
-    .nav-about,
-    .nav-articles-content,
-    .nav-about-content,
-    .nav-title {
-        border-left: 0px solid black;
-        display: flex;
-        height: 8vh;
-        width: 100vw;
-        position: relative;
-        border-top: 1px solid black;
-        min-height: 40px;
-       
+  .nav-about-content > .nav-content {
+    width: 100%;
+    padding: 5em;
+  }
 
-    }
+  .nav-articles-content .nav-content {
+    border-bottom: 0px solid black;
+    width: 100%;
+  }
 
-    .nav-about-content{
+  .nav-articles-content {
+    display: none;
+    background-color: white;
+    width: 100%;
+    height: 16vh;
+    border: 0px solid black;
+    min-height: 90px;
+  }
 
-        overflow: auto;
+  .nav-about-content {
+    display: none;
+    background-color: white;
+    width: 100%;
+    height: 50vh;
+  }
 
-    }
+  .nav-title {
+    background-color: white;
+    width: 100%;
+    height: 18vh;
+    position: relative;
+    display: none;
+  }
 
-    .nav-articles>h6,
-    .nav-about>h6 {
-        padding: 1em;
-        transform: translate(0, 0) rotate(0);
+  .nav-title > h1 {
+    cursor: pointer;
+    font-size: 5em;
+    transform: translate(0, 0) rotate(0);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    white-space: nowrap;
+    text-align: left;
+    justify-content: left;
+    margin: auto;
+  }
 
-    }
+  br {
+    display: none;
+  }
 
-    .nav-content h6 {
-        width: 100%;
-        border-top: 1px solid black;
-        padding: 1em;
-        
-    }
-
-    .nav-about-content>.nav-content {
-        width: 100%;
-        padding: 5em;
-    }
-
-    .nav-articles-content .nav-content {
-        border-bottom: 0px solid black;
-        width: 100%;
-
-    }
-
-
-    .nav-articles-content {
-        display: none;
-        background-color: white;
-        width: 100%;
-        height: 16vh;
-        border: 0px solid black;
-        min-height: 90px;
-
-
-    }
-
-
-    .nav-about-content {
-        display: none;
-        background-color: white;
-        width: 100%;
-        height: 50vh;
-    }
-
-    .nav-title {
-        background-color: white;
-        width: 100%;
-        height: 18vh;
-        position: relative;
-        display: none;
-
-    }
-
-    .nav-title>h1 {
-        cursor: pointer;
-        font-size: 5em;
-        transform: translate(0, 0) rotate(0);
-        position: relative;
-        bottom: 0;
-        left: 0;
-        white-space: nowrap;
-        text-align: left;
-        justify-content: left;
-        margin: auto;
-    }
-
-    br {
-        display: none;
-    }
-
-    .header-rect {
-        display: none;
-    }
-
+  .header-rect {
+    display: none;
+  }
 }
 
 /* Estilos para telas médias (tablets, por exemplo) */
 @media only screen and (min-width: 768px) and (max-width: 1150px) {
-    body {
-        background-color: red;
-    }
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 100vh;
+    width: calc(100% - 10vw);
+    padding: 2em;
+  }
 
-    section {
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        height: 100vh;
-        width: calc(100% - 10vw);
-        padding: 2em;
-    }
+  .nav-articles,
+  .nav-about {
+    width: 5vw;
+  }
 
-    .nav-articles,
-    .nav-about {
-        width: 5vw;
+  .header {
+    justify-content: center;
+  }
 
-    }
+  .nav-articles-content {
+    display: none;
+    background-color: white;
+    height: 100%;
+    width: 26vw;
+  }
 
-    .header {
-        justify-content: center
-    }
+  .nav-about-content {
+    display: none;
+    background-color: white;
+    height: 100%;
+    width: 45vw;
+  }
 
-    .nav-articles-content {
-        display: none;
-        background-color: white;
-        height: 100%;
-        width: 26vw;
-    }
+  .nav-title {
+    background-color: white;
+    height: 100%;
+    width: 19vw;
+    position: relative;
+    display: none;
+  }
 
-    .nav-about-content {
-        display: none;
-        background-color: white;
-        height: 100%;
-        width: 45vw;
-    }
+  .nav-articles > h6,
+  .nav-about > h6 {
+    position: absolute;
+    bottom: 0;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+  }
 
-    .nav-title {
-        background-color: white;
-        height: 100%;
-        width: 19vw;
-        position: relative;
-        display: none;
+  .nav-title > h1 {
+    cursor: pointer;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-10%, 380%) rotate(-90deg);
+    transform-origin: 0 0;
+    font-size: 8em;
+    white-space: nowrap;
+  }
 
-    }
-
-    .nav-articles>h6,
-    .nav-about>h6 {
-
-
-        position: absolute;
-        bottom: 0;
-        transform-origin: 0 0;
-        transform: rotate(-90deg);
-    }
-
-    .nav-title>h1 {
-        cursor: pointer;
-        position: absolute;
-        bottom: 50%;
-        left: 50%;
-        transform: translate(-10%, 380%) rotate(-90deg);
-        transform-origin: 0 0;
-        font-size: 8em;
-        white-space: nowrap;
-    }
-
-    .header-rect {
-        display: none;
-
-    }
+  .header-rect {
+    display: none;
+  }
 }
 
 /* Estilos para telas grandes (desktops, por exemplo) */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
 
 /* Estilos para telas extra grandes (monitores grandes, por exemplo) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+}

@@ -1,103 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALTA & BAIXA</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALTA & BAIXA</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsividade.css" />
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsividade.css" />
-</head>
+    <script>
+      window.onload = function () {
+        var homeElement = document.querySelector(".home");
+        homeElement.scrollIntoView();
+      };
+    </script>
+  </head>
 
-<body>
-  <!-- ARTIGOS ALTA -->
-  <div id="alta-container"></div>
+  <body>
+    <!-- ARTIGOS ALTA -->
+    <div id="alta"></div>
 
-  <!-- HOME -->
-  <section id="home" class="home">
-    <!-- HEADER -->
-    <div class="header">
-      <div class="header-rect" style="width: fit-content;"">
-        <h6>Revista de cultura tipográfica</h6>
-        <p>no1 / trimestral</p>
-      </div>
-      <h1 class="header-title">ALTA & BAIXA</h1>
-      <div class="header-rect" style="width: fit-content;">
+    <!-- HOME -->
+    <section id="home" class="home">
+      <!-- HEADER -->
+      <div class="header">
+        <div class="header-rect" style="width: fit-content">
+          <h6>Revista de cultura tipográfica</h6>
+          <p>no1 / trimestral</p>
+        </div>
+        <h1 class="header-title">ALTA & BAIXA</h1>
+        <div class="header-rect" style="width: fit-content">
           <p>Coimbra, 2024</p>
-        <h6>26 de janeiro</h6>
-      </div>
-    </div>
-    <!-- P5JS CANVAS -->
-    <div class="canvas">
-      <img src="./images/AltaBaixa.png" alt="" />
-    </div>
-    <!-- NAVBAR -->
-    <nav class="nav">
-      <div class="nav-title">
-        <h1 onclick="hideAllNavsExcept()">ALTA & BAIXA</h1>
-      </div>
-      <div class="nav-articles">
-        <h6>Artigos</h6>
-      </div>
-      <div class="nav-articles-content">
-        <div class="nav-content">
-          <br />
-          <br />
-          <h6>
-            <a href="#gbds" class="article-link">Using Autoencoders to Generate Skeleton-based Typography</a>
-          </h6>
-          <h6>
-            <a href="#fgsh" class="article-link">Thirteen Ways of Looking at a Typeface
-            </a>
-          </h6>
+          <h6>26 de janeiro</h6>
         </div>
       </div>
-      <div class="nav-about">
-        <h6>Sobre</h6>
+      <!-- P5JS CANVAS -->
+      <div class="canvas">
+        <img src="./images/AltaBaixa.png" alt="" />
       </div>
-      <div class="nav-about-content">
-        <div class="nav-content">
-          <p>
-            Bem-vindos à primeira edição da revista <b>"Alta Baixa"</b>! O
-            nosso nome reflete a nossa ligação com a tipografia e a cidade de
-            Coimbra. Somos estudantes do curso de Design e Multimédia, e esta
-            revista é o nosso projeto do Lab. Design Editorial. "Alta Baixa" é
-            uma revista que explora a tipografia em todos os seus aspetos,
-            desde a sua história até às mais recentes inovações tecnológicas.
-            Uma investigação acerca dos elementos que conferem fascínio à
-            tipografia, bem como examinar a maneira pela qual o design
-            desempenha um papel fundamental na comunicação. Nesta primeira
-            edição, convidamo-vos a explorar connosco o mundo da tipografia e
-            aprofundar os vossos conhecimentos sobre tipos de letra e
-            composição. Agradecemos a todos pelo apoio e esperamos que
-            desfrutem desta viagem tipográfica.
-
-            <br />
-            <br />
-            Francisco Rodrigues, Inês Mendes, Micael Nisa e Tomás Oliveira.
-            <br />
-            <br />
-            Editor-Chefe, Revista "Alta Baixa"
-          </p>
+      <!-- NAVBAR -->
+      <nav class="nav">
+        <div class="nav-title">
+          <h1 onclick="hideAllNavsExcept()">ALTA & BAIXA</h1>
         </div>
-      </div>
-    </nav>
-  </section>
+        <div class="nav-articles">
+          <h6>Artigos</h6>
+        </div>
+        <div class="nav-articles-content">
+          <div class="nav-content">
+            <br />
+            <br />
+            <h6>
+              <a href="#alta-container" class="article-link"
+                >Using Autoencoders to Generate Skeleton-based Typography</a
+              >
+            </h6>
+            <h6>
+              <a href="#baixa-container" class="article-link"
+                >Thirteen Ways of Looking at a Typeface
+              </a>
+            </h6>
+          </div>
+        </div>
+        <div class="nav-about">
+          <h6>Sobre</h6>
+        </div>
+        <div class="nav-about-content">
+          <div class="nav-content">
+            <p>
+              Bem-vindos à primeira edição da revista <b>"Alta Baixa"</b>! O
+              nosso nome reflete a nossa ligação com a tipografia e a cidade de
+              Coimbra. Somos estudantes do curso de Design e Multimédia, e esta
+              revista é o nosso projeto do Lab. Design Editorial. "Alta Baixa" é
+              uma revista que explora a tipografia em todos os seus aspetos,
+              desde a sua história até às mais recentes inovações tecnológicas.
+              Uma investigação acerca dos elementos que conferem fascínio à
+              tipografia, bem como examinar a maneira pela qual o design
+              desempenha um papel fundamental na comunicação. Nesta primeira
+              edição, convidamo-vos a explorar connosco o mundo da tipografia e
+              aprofundar os vossos conhecimentos sobre tipos de letra e
+              composição. Agradecemos a todos pelo apoio e esperamos que
+              desfrutem desta viagem tipográfica.
 
-  <!-- ARTIGOS BAIXA -->
-  <div id="baixa-container"></div>
+              <br />
+              <br />
+              Francisco Rodrigues, Inês Mendes, Micael Nisa e Tomás Oliveira.
+              <br />
+              <br />
+              Editor-Chefe, Revista "Alta Baixa"
+            </p>
+          </div>
+        </div>
+      </nav>
+    </section>
 
-  <!-- SCRIPTS -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var homeElement = document.querySelector(".home");
-      homeElement.scrollIntoView();
-    });
-  </script>
-  <script src="scripts/nav.js"></script>
-  <script src="scripts/resize.js"></script>
-  <script src="scripts/fetch.js"></script>
-</body>
+    <!-- ARTIGOS BAIXA -->
+    <div id="baixa"></div>
 
+    <!-- SCRIPTS -->
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/resize.js"></script>
+    <script src="scripts/fetch.js"></script>
+  </body>
 </html>
